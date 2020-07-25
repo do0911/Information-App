@@ -1,31 +1,21 @@
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import { Nav, NavItem, NavLink } from "reactstrap";
+import AppBar from "@material-ui/core/AppBar";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
 
 const Header = () => {
   return (
-    <Nav tabs>
-      <NavItem>
-        <NavLink>
-          <Link to="/Home">Home</Link>
-        </NavLink>
-      </NavItem>
-      <NavItem>
-        <NavLink>
-          <Link to="/News">News</Link>
-        </NavLink>
-      </NavItem>
-      <NavItem>
-        <NavLink>
-          <Link to="/Weather">Weather</Link>
-        </NavLink>
-      </NavItem>
-      <NavItem>
-        <NavLink>
-          <Link to="/Maps">Maps</Link>
-        </NavLink>
-      </NavItem>
-    </Nav>
+    <div>
+      <AppBar position="static">
+        <Tabs aria-label="wrapped label tabs example">
+          <Tab label="Home" href="/" />
+          <Tab label="News" href="/News" />
+          <Tab label="Weather" href="/Weather" />
+          <Tab label="Maps" href="/Maps" />
+        </Tabs>
+      </AppBar>
+    </div>
   );
 };
 
