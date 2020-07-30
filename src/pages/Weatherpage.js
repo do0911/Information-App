@@ -1,18 +1,37 @@
 import React from "react";
-import { Ionicons } from "@expo/vector-icons";
+import { List, ListItem, ListItemText } from "@material-ui/core";
 
 const weatherCases = {
-  Rain: "ios-rainy",
-  Clear: "ios-sunny",
-  Thunder: "ios-Thunderstorm",
-  Clouds: "ios-cloudy",
-  Snow: "ios-snow",
-  Drizzle: "ios-rainy",
-  Haze: "ios-rainy",
+  Rain: "10d",
+  Clear: "01d",
+  Thunder: "11d",
+  Clouds: "03d",
+  Snow: "13d",
+  Drizzle: "10d",
+  Haze: "50d",
 };
 
 const Weatherpage = ({ country, city, temp, feel_temp, weather }) => {
-  return <div>{country}</div>;
+  const src = `http://openweathermap.org/img/wn/${weatherCases[weather]}@4x.png`;
+  return (
+    <div>
+      <List>
+        <img src={src} alt="undefined" />
+        <ListItem>
+          <ListItemText primary={country} secondary={city}></ListItemText>
+        </ListItem>
+        <ListItem>
+          <ListItemText primary={temp + " º"} secondary="Temperature" />
+        </ListItem>
+        <ListItem>
+          <ListItemText
+            primary={feel_temp + " º"}
+            secondary="wind chill Temperature"
+          />
+        </ListItem>
+      </List>
+    </div>
+  );
 };
 
 export default Weatherpage;

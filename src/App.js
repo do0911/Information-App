@@ -8,7 +8,7 @@ import Container from "@material-ui/core/Container";
 class App extends Component {
   render() {
     return (
-      <Container className="all">
+      <Container maxWidth="md">
         <Header />
         <Router>
           <Route exact path="/" component={Home}></Route>
