@@ -36,7 +36,6 @@ export class Maps extends Component {
     this.setState({ num: this.state.num + 1 });
   };
   render() {
-    console.log(this.state);
     return (
       <div>
         {this.state.isLoaded ? (
@@ -66,8 +65,6 @@ const style = {
   height: "50%",
 };
 
-/* {this.state.selectedPlace.name} 
-<Marker onClick={this.onMarkerClick} name={"Current location"} />*/
 export default GoogleApiWrapper({
   apiKey: "AIzaSyCQ59HED9zpJ4ZJkYxBIkKuq0buYyb_bws",
 })(Maps);

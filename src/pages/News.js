@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Newspage from "./Newspage";
 import axios from "axios";
 import { FormGroup, Input } from "reactstrap";
+import LinearProgress from "@material-ui/core/LinearProgress";
 
 class News extends Component {
   constructor(props) {
@@ -69,7 +70,7 @@ class News extends Component {
             />
           ))
         ) : (
-          <div>로딩중</div>
+          <LinearProgress />
         )}
       </div>
     );

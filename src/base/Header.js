@@ -6,16 +6,14 @@ import Tab from "@material-ui/core/Tab";
 
 const Header = () => {
   return (
-    <div>
-      <AppBar position="static">
-        <Tabs aria-label="wrapped label tabs example">
-          <Tab label="Home" href="/" />
-          <Tab label="News" href="/News" />
-          <Tab label="Weather" href="/Weather" />
-          <Tab label="Maps" href="/Maps" />
-        </Tabs>
-      </AppBar>
-    </div>
+    <AppBar position="static">
+      <Tabs aria-label="wrapped label tabs example">
+        <Tab label="Home" href="/" />
+        <Tab label="News" href="/News" />
+        <Tab label="Weather" href="/Weather" />
+        <Tab label="Maps" href="/Maps" />
+      </Tabs>
+    </AppBar>
   );
 };
 

@@ -8,9 +8,9 @@ import Container from "@material-ui/core/Container";
 class App extends Component {
   render() {
     return (
-      <Container fixed>
+      <Container className="all">
+        <Header />
         <Router>
-          <Header />
           <Route exact path="/" component={Home}></Route>
           <Route path="/News" component={News}></Route>
           <Route path="/Weather" component={Weather}></Route>
